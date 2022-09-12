@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:gravity="center"
     android:layout_height="match_parent"
@@ -9,14 +10,34 @@
 
 
     <Button
-
+        android:id="@+id/alps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/homebtn"
-        android:text="Home"
-        android:layout_gravity="center"
-        />
+        android:paddingRight="10dp"
+        android:text="Alphabets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
 
-</LinearLayout>
+
+        app:layout_constraintTop_toBottomOf="@+id/numbers"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <Button
+        android:id="@+id/numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="292dp"
+
+        android:text="Numbers"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

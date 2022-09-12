@@ -12,7 +12,6 @@ import com.example.navlayout.databinding.ActivityMainBinding
 import com.example.navlayout.databinding.FragmentHomeBinding
 
 
-
 class Home : Fragment() {
     private lateinit var binding: ActivityMainBinding
 
@@ -21,11 +20,19 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding = DataBindingUtil.inflate<FragmentHomeBinding>(layoutInflater , R.layout.fragment_home , container,
-        false)
+        val binding = DataBindingUtil.inflate<FragmentHomeBinding>(
+            layoutInflater, R.layout.fragment_home, container,
+            false
+        )
 
-        binding.homebtn.setOnClickListener{
+        binding.numbers.setOnClickListener {
             it.findNavController().navigate(R.id.action_home2_to_firstFragment)
+        }
+
+
+
+        binding.alps.setOnClickListener {
+            it.findNavController().navigate(R.id.action_home2_to_secondFragment)
         }
         return binding.root
     }
